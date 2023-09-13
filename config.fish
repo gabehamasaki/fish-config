@@ -26,8 +26,21 @@ export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 # Aliases
 
 alias art="php artisan"         
-alias c="cd $HOME/code"
+
+function c -d "cd ~/code <dir>"
+    if count $argv > /dev/null
+        if contains -- -s $argv[1]
+            mkdir $HOME/code/$argv[2] && cd $HOME/code/$argv[2]
+        else if contains -- -r $argv[1]
+            rm -rf $HOME/code/$argv[2]
+        else 
+            cd $HOME/code/$argv[1]
+        end
+    else 
+        cd $HOME/code
+    end
+end
 
 function new-project -d "Create a new project laravel with typescript and react/vue/blade"
-    laravel new $argv[0] --typescript --breeze --stack=$argv[2] --git --no-interaction
+    laravel new $argv[1] --typescript --breeze --stack=$argv[2] --git --no-interaction
 end
