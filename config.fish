@@ -4,6 +4,9 @@ end
 
 starship init fish | source
 
+# Java
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
 # Ruby
 export PATH="$PATH:$HOME/.rbenv/bin"
 eval "$(rbenv init -)"
