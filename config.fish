@@ -7,6 +7,9 @@ starship init fish | source
 # Java
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
+# PhP
+export PATH="$PATH:$HOME/.config/composer/vendor/bin/"
+
 # Ruby
 export PATH="$PATH:$HOME/.rbenv/bin"
 eval "$(rbenv init -)"
@@ -24,3 +27,6 @@ export PATH="$PATH:$HOME/.yarn/bin"
 # Bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+
+alias art="php artisan"
