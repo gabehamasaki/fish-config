@@ -6,9 +6,11 @@ starship init fish | source
 source ~/.asdf/asdf.fish
 
 export PATH="$PATH:/bin/squashfs-root/usr/bin/"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="/home/gabriel/.local/bin:$PATH"
 
-# PhP
 export PATH="$PATH:$HOME/.config/composer/vendor/bin/"
+export PATH="/home/gabriel/.asdf/shims:$PATH"
 export PATH="$PATH:$HOME/.yarn/bin"
 
 # GO
